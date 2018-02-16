@@ -37,10 +37,12 @@ export PKG_CONFIG_PATH=/home/vchaska1/protobuf/lib/pkgconfig
 
 ### C++
 
-You can follow instructions in [../src/README.md](../src/README.md) to install
-protoc and protobuf C++ runtime from source.
+First, add the C++ runtime libraries to LD_LIBRARY_PATH variable.
+```bash
+export LD_LIBRARY_PATH=/home/vchaska1/protobuf/lib
+```
 
-Then run "make cpp" in this examples directory to build the C++ example. It
+Then run "make cpp" in this directory to build the C++ example. It
 will create two executables: add_person_cpp and list_people_cpp. These programs
 simply take an address book file as their parameter. The add_person_cpp
 programs will create the file if it doesn't already exist.
@@ -50,39 +52,32 @@ To run the examples:
     $ ./add_person_cpp addressbook.data
     $ ./list_people_cpp addressbook.data
 
-Note that on some platforms you may have to edit the Makefile and remove
-"-lpthread" from the linker commands (perhaps replacing it with something else).
-We didn't do this automatically because we wanted to keep the example simple.
+### Python (Incomplete)
 
-### Python
+Add the following two lines at the beginning of your Python code.
+```python
+import sys
+sys.path.append('/home/phao3/protobuf/protobuf-3.4.0/python')
+```
 
-Follow instructions in [../README.md](../README.md) to install protoc and then
-follow [../python/README.md](../python/README.md) to install protobuf python
-runtime from source. You can also install python runtime using pip:
+Make sure to add these lines before any protobuf related imports.
 
-    $ pip install protobuf
-
-Make sure the runtime version is the same as protoc binary, or it may not work.
-
-After you have install both protoc and python runtime, run "make python" to
-build two executables (shell scripts actually): add_person_python and
-list_people_python. They work the same way as the C++ executables.
+Then run "make python" to build two executables (shell scripts actually):
+add_person_python and list_people_python. They work the same way as the
+C++ executables.
 
 ### Java
 
-Follow instructions in [../README.md](../README.md) to install protoc and then
-download protobuf Java runtime .jar file from maven:
+Set the following CLASSPATH environment variable for runtime protobuf class
+discovery:
+```bash
+export CLASSPATH=/home/vchaska1/protobuf/protobuf-java-3.5.1.jar
+```
 
-    https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java
-
-Then run the following:
-
-    $ export CLASSPATH=/path/to/protobuf-java-[version].jar
-    $ make java
-
-This will create the add_person_java/list_people_java executables (shell
-scripts) and can be used to create/display an address book data file.
+Then run "make java". This will create the add_person_java/list_people_java
+executables (shell scripts) and can be used to create/display an address book
+data file.
 
 Observe that the C++, Python, and Java examples in this directory run in a
-similar way and can view/modify files created by the Go example and vice
+similar way and can view/modify files created by other languages and vice
 versa.
