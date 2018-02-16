@@ -13,7 +13,7 @@ use list_people_python to read it.
 These examples are part of the Protocol Buffers tutorial, located at:
   https://developers.google.com/protocol-buffers/docs/tutorials
 
-## Running protobuf on remote.cs machines
+## Running protobuf on BU remote.cs machines
 
 We'll be using Protocol Buffers 3.5.1. It is already installed in my home
 directory. This installation includes the protocol compiler (the protoc binary)
@@ -66,6 +66,11 @@ Then run "make python" to build two executables (shell scripts actually):
 add_person_python and list_people_python. They work the same way as the
 C++ executables.
 
+To run the examples:
+
+    $ ./add_person_python addressbook.data
+    $ ./list_people_python addressbook.data
+
 ### Java
 
 Set the following CLASSPATH environment variable for runtime protobuf class
@@ -77,6 +82,12 @@ export CLASSPATH=/home/vchaska1/protobuf/protobuf-java-3.5.1.jar
 Then run "make java". This will create the add_person_java/list_people_java
 executables (shell scripts) and can be used to create/display an address book
 data file.
+
+To run the examples:
+
+    $ ./add_person_java addressbook.data
+    $ ./list_people_java addressbook.data
+
 
 Observe that the C++, Python, and Java examples in this directory run in a
 similar way and can view/modify files created by other languages and vice
