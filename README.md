@@ -1,4 +1,6 @@
-# Protocol Buffers - Code Example
+# Protocol Buffers - Usage and example code
+
+This tutorial comes from [Protocol Buffers Website](https://developers.google.com/protocol-buffers/)
 
 This directory contains example code that uses Protocol Buffers to manage an
 address book. Two programs are provided for each supported language. The
@@ -11,16 +13,27 @@ use list_people_python to read it.
 These examples are part of the Protocol Buffers tutorial, located at:
   https://developers.google.com/protocol-buffers/docs/tutorials
 
-## Build the example using make
+## Running protobuf on remote.cs machines
 
-You must install the protobuf package before you can build it using make. The
-minimum requirement is to install protocol compiler (i.e., the protoc binary)
-and the protobuf runtime for the language you want to build.
+We'll be using Protocol Buffers 3.5.1. It is already installed in my home
+directory. This installation includes the protocol compiler (the protoc binary)
+and the protobuf runtime for the 3 languages that we use - C++, Java and Python.
 
-You can simply run "make" to build the example for all languages (except for
-Go). However, since different language has different installation requirement,
-it will likely fail. It's better to follow individual instrutions below to
-build only the language you are interested in.
+_Note: Please read the Protocol Buffers tutorial on above link to get better idea._
+
+Similar to Apache Thrift, you need to specify environment variables at compile and runtime.
+* Protobuf binary:
+```bash
+export PATH=/home/vchaska1/protobuf/bin:$PATH
+```
+The protocol compiler (protoc) binary is present at this location. It is required to
+generate code from .proto files.
+
+* Protobuf package configuration file:
+```bash
+export PKG_CONFIG_PATH=/home/vchaska1/protobuf/lib/pkgconfig
+```
+
 
 ### C++
 
