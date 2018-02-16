@@ -1,9 +1,12 @@
 #! /usr/bin/env python
 
 # See README.txt for information and build instructions.
+import sys
+
+sys.path.append('/home/vchaska1/protobuf/protobuf-3.5.1/python')
 
 import addressbook_pb2
-import sys
+
 
 try:
   raw_input          # Python 2

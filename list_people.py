@@ -3,8 +3,10 @@
 # See README.txt for information and build instructions.
 
 from __future__ import print_function
-import addressbook_pb2
 import sys
+
+sys.path.append('/home/vchaska1/protobuf/protobuf-3.5.1/python')
+import addressbook_pb2
 
 
 # Iterates though all people in the AddressBook and prints info about them.
