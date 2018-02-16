@@ -15,7 +15,7 @@ These examples are part of the Protocol Buffers tutorial, located at:
 
 ## Running protobuf on BU remote.cs machines
 
-We'll be using Protocol Buffers 3.5.1. It is already installed in my home
+We'll be using Protocol Buffers 3.5.1 in this course. It is already installed in my home
 directory. This installation includes the protocol compiler (the protoc binary)
 and the protobuf runtime for the 3 languages that we use - C++, Java and Python.
 
@@ -92,3 +92,7 @@ To run the examples:
 Observe that the C++, Python, and Java examples in this directory run in a
 similar way and can view/modify files created by other languages and vice
 versa.
+
+---
+
+_Note: You can also install protobuf on your own machine and do the development work there. I personally found it easier. Please see the official website for instructions on this. HOWEVER, please make sure that your code compiles and works correctly on remote.cs machines before submitting._
