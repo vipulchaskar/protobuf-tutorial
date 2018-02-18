@@ -18,6 +18,7 @@ These examples are part of the Protocol Buffers tutorial, located at:
 We'll be using Protocol Buffers 3.5.1 in this course. It is already installed in my home
 directory. This installation includes the protocol compiler (the protoc binary)
 and the protobuf runtime for the 3 languages that we use - C++, Java and Python.
+Let me know ASAP if you face any issues with running this on remote.
 
 _Note: Please read the Protocol Buffers tutorial on above link to get better idea._
 
