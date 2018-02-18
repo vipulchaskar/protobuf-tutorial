@@ -52,13 +52,14 @@ To run the examples:
     $ ./add_person_cpp addressbook.data
     $ ./list_people_cpp addressbook.data
 
-### Python (Incomplete)
+### Python
 
 Add the following two lines at the beginning of your Python code.
 ```python
 import sys
 sys.path.append('/home/vchaska1/protobuf/protobuf-3.5.1/python')
 ```
+(This should be already present in python files of this repo)
 
 Make sure to add these lines before any protobuf related imports.
 
