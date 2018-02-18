@@ -57,7 +57,7 @@ To run the examples:
 Add the following two lines at the beginning of your Python code.
 ```python
 import sys
-sys.path.append('/home/phao3/protobuf/protobuf-3.4.0/python')
+sys.path.append('/home/vchaska1/protobuf/protobuf-3.5.1/python')
 ```
 
 Make sure to add these lines before any protobuf related imports.
